@@ -1,0 +1,13 @@
+/* Global ========================= */
+
+:root {
+  --dark-blue: #13374f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header ========================= */
