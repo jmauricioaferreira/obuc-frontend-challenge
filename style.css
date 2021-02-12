@@ -10,4 +10,37 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Header ========================= */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+svg {
+  fill: rgba(18, 56, 79, 0.7);
+  position: absolute;
+  left: 0;
+}
+
+svg polygon {
+}
+
+img {
+  width: 100vw;
+  height: auto;
+}
+
+h1 {
+  position: absolute;
+  font-weight: 300;
+  color: #fff;
+  left: 80px;
+  top: calc(50% - 24px);
+}
