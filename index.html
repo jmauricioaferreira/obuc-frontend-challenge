@@ -2,55 +2,60 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
   <script src="https://kit.fontawesome.com/b36e4ed4d1.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
   <header>
-    <img src="/assets/admin-small.png" alt="Imagem do Cabeçalho">
-    <svg width='400' height='400' class="">
-      <polygon points='0,400 0,0 400,0 250,400' />
+    <img src="/assets/admin-small.png" alt="Imagem do Cabeçalho" />
+    <svg width="400" height="400" class="">
+      <polygon points="0,400 0,0 400,0 250,400" />
     </svg>
     <h1 id="header-name">Administração</h1>
   </header>
   <main>
-    <section class="container">
-      <nav>
-        <a href="#">Acessos Administrativos</a>
-        <a href="#">Serviços</a>
-        <a href="#">Fale Conosco</a>
-        <a href="#">Reporte</a>
-        <a href="#">Pesquisa de Satisfação</a>
-        <a href="#">Prédios</a>
-        <a href="#">Locais de Trabalho</a>
-      </nav>
+    <div class="container">
+      <section class="nav">
+        <nav>
+          <a href="#">Acessos Administrativos</a>
+          <a href="#">Serviços</a>
+          <a href="#">Fale Conosco</a>
+          <a href="#">Reporte</a>
+          <a href="#">Pesquisa de Satisfação</a>
+          <a href="#">Prédios</a>
+          <a href="#">Locais de Trabalho</a>
+        </nav>
+      </section>
       <section class="workplace-info">
         <h1 id="workplace-title">Locais de Trabalho</h1>
-        <form action="">
+        <form action="" onsubmit="Form.submit(event)">
           <div>
             <label for="employee">Funcionário</label>
-            <input type="text" id="employee" name="employee">
+            <input type="text" id="employee" name="employee" />
           </div>
-          <div><label for="building">Prédio</label>
-            <input type="text" id="building" name="building">
+          <div>
+            <label for="building">Prédio</label>
+            <select id="building" name="building">
+              <option value="Prédio 1">Prédio 1</option>
+              <option value="Prédio 2">Prédio 2</option>
+              <option value="Prédio 3">Prédio 3</option>
+            </select>
           </div>
           <div id="workplace-div">
-            <label for="workplace">Local de Trabalho
-            </label>
-            <input type="text" id="workplace" name="workplace">
-            <i class="fas fa-plus"></i>
+            <label for="workplace">Local de Trabalho </label>
+            <input type="text" id="workplace" name="workplace" />
+            <button>
+              <i class="fas fa-plus"></i>
+            </button>
           </div>
         </form>
-        <table>
+        <table id="data-table">
           <thead>
             <tr>
               <th>Funcionário</th>
@@ -60,29 +65,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>João</td>
-              <td>Prédio 1</td>
-              <td>Torre</td>
-              <td>
-                <i class="fas fa-pencil-alt"></i>
-                <i class="fas fa-trash"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>João</td>
-              <td>Prédio 1</td>
-              <td>Torre</td>
-              <td>aa</td>
-            </tr>
           </tbody>
         </table>
-        </div>
-        </div>
+      </section>
+    </div>
 
   </main>
   <footer></footer>
-
+  <script src="./scripts.js"></script>
 </body>
 
 </html>

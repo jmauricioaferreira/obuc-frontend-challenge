@@ -2,6 +2,7 @@
 
 :root {
   --dark-blue: #13374f;
+  --yellowish-brown: #9f826d;
 }
 
 * {
@@ -22,8 +23,11 @@ main {
 }
 
 .container {
-  width: min(95vw, 1000px);
+  width: min(95vw, 900px);
   margin: auto;
+  display: grid;
+  grid-template-columns: 27% 65%;
+  gap: 8%;
 }
 
 /* Header ========================= */
@@ -45,7 +49,7 @@ svg {
 }
 
 img {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
@@ -59,16 +63,19 @@ img {
   opacity: 0.75;
 }
 
-/* Main ========================= */
+/* Main and Section ========================= */
 
 main {
+  background: #fff;
   padding-top: 40px;
 }
 
-main .container {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  gap: 70px;
+main .nav {
+  grid-column: 1/2;
+}
+
+main .workplace-info {
+  grid-column: 2/3;
 }
 /* Nav ========================= */
 
@@ -84,14 +91,20 @@ a {
   text-decoration: none;
   height: 35px;
   margin-bottom: 5px;
+  border-radius: 2px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: 0.3s;
 }
 
-/* Form and Table ========================= */
+nav a:hover {
+  background-color: var(--yellowish-brown);
+}
 
+/* Title ======================== */
 #workplace-title {
   font-size: 28px;
   font-style: italic;
@@ -100,6 +113,8 @@ a {
   margin-bottom: 5px;
   font-weight: normal;
 }
+
+/* Form ======================== */
 
 .workplace-info form {
   font-style: italic;
@@ -115,9 +130,44 @@ a {
 
   margin-right: 5px;
   color: var(--dark-blue);
+  opacity: 0.8;
+}
+
+.workplace-info form div input,
+.workplace-info form div select {
+  border: 1px solid var(--dark-blue);
+  border-radius: 2px;
+  opacity: 0.6;
+  outline: none;
+}
+
+.workplace-info form div input:focus,
+.workplace-info form div input:hover,
+.workplace-info form div select:focus,
+.workplace-info form div select:hover {
+  box-shadow: 0 0 0 0.5px var(--dark-blue);
+}
+
+.workplace-info form input,
+.workplace-info form select {
+  height: 28px;
+  font-family: Calibri;
+  font-size: 12px;
+}
+
+.workplace-info button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.workplace-info i:hover {
+  color: var(--yellowish-brown);
+  cursor: pointer;
 }
 
 #workplace-div {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -128,17 +178,16 @@ a {
 }
 
 #workplace-div input {
-  flex-grow: 2;
+  width: calc(100% - 22px);
 }
 
-.workplace-info form input {
-  height: 28px;
-}
-
+/* Table ======================== */
 .workplace-info table {
   width: 100%;
   font-size: 12px;
   border-spacing: 0px;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
 }
 
 .workplace-info table td,
@@ -150,6 +199,7 @@ a {
   width: 100px;
   background: var(--dark-blue);
   padding: 8px 0px;
+  border-radius: 2px;
 
   color: #fff;
   font-weight: normal;
@@ -162,7 +212,6 @@ a {
 
 .workplace-info tbody td {
   background: #f6f6f6;
-  opacity: 0.6;
   padding: 8px 0px;
   text-align: center;
 }
