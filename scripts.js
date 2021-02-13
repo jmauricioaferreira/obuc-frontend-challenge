@@ -1,24 +1,18 @@
+const Storage = {
+  get() {
+    return JSON.parse(sessionStorage.getItem("ArrLocaisTrabalho")) || [];
+  },
+  set(information) {
+    sessionStorage.setItem("ArrLocaisTrabalho", JSON.stringify(information));
+  },
+};
+
 const EmployeeInfo = {
-  all: [
-    {
-      employee: "Rafa",
-      building: "Prédio 1",
-      workplace: "casa",
-    },
-    {
-      employee: "Al",
-      building: "Prédio 1",
-      workplace: "casa",
-    },
-    {
-      employee: "Alga",
-      building: "Prédio 1",
-      workplace: "casa",
-    },
-  ],
+  all: Storage.get(),
 
   add(employeeInfo) {
     EmployeeInfo.all.push(employeeInfo);
+    App.reload();
   },
 
   remove(index) {
@@ -91,7 +85,7 @@ const Form = {
     try {
       Form.validateFields();
       const employeeInfo = Form.getValues();
-      DOM.addTableRow(employeeInfo);
+      EmployeeInfo.add(employeeInfo);
       Form.clearFields();
     } catch (error) {
       alert(error.message);
@@ -104,6 +98,7 @@ const App = {
     EmployeeInfo.all.forEach((employeeInfo, index) => {
       DOM.addTableRow(employeeInfo, index);
     });
+    Storage.set(EmployeeInfo.all);
   },
 
   reload() {
