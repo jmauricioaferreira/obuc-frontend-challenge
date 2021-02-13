@@ -10,19 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/b36e4ed4d1.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
   <header>
     <img src="/assets/admin-small.png" alt="Imagem do Cabeçalho">
-    <svg width='400' height='200' class="">
+    <svg width='400' height='400' class="">
       <polygon points='0,400 0,0 400,0 250,400' />
     </svg>
     <h1 id="header-name">Administração</h1>
   </header>
   <main>
-    <div class="container">
+    <section class="container">
       <nav>
         <a href="#">Acessos Administrativos</a>
         <a href="#">Serviços</a>
@@ -32,7 +33,52 @@
         <a href="#">Prédios</a>
         <a href="#">Locais de Trabalho</a>
       </nav>
-    </div>
+      <section class="workplace-info">
+        <h1 id="workplace-title">Locais de Trabalho</h1>
+        <form action="">
+          <div>
+            <label for="employee">Funcionário</label>
+            <input type="text" id="employee" name="employee">
+          </div>
+          <div><label for="building">Prédio</label>
+            <input type="text" id="building" name="building">
+          </div>
+          <div id="workplace-div">
+            <label for="workplace">Local de Trabalho
+            </label>
+            <input type="text" id="workplace" name="workplace">
+            <i class="fas fa-plus"></i>
+          </div>
+        </form>
+        <table>
+          <thead>
+            <tr>
+              <th>Funcionário</th>
+              <th>Prédio</th>
+              <th>Local de Trabalho</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João</td>
+              <td>Prédio 1</td>
+              <td>Torre</td>
+              <td>
+                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>João</td>
+              <td>Prédio 1</td>
+              <td>Torre</td>
+              <td>aa</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
 
   </main>
   <footer></footer>
