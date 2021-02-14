@@ -7,7 +7,7 @@
  <h3> ℹ️ Informações gerais sobre a criação do projeto: </h3> 
 
 ◽ Linguagens utilizadas: HTML, Css e JavaScript puro ; </br>
-◽ Os ícones foram retirados da biblioteca do fontawsome ; </br>
+◽ Os ícones foram retirados da biblioteca do fontawesome ; </br>
 ◽ As informações da lista foram armazenadas na sessionStorage do navegador em um array chamado "arrLocaisTrabalho"; </br>
 </br>
 
