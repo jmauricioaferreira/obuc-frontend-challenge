@@ -2,7 +2,7 @@
 
 <h2 align="center"> OBUC Front-End Challenge</h2>
 
- 💻 Você pode visualizar a página criada no githubPages clicando <a href=“https://jmauricioaferreira.github.io/obuc-frontend-challenge/“>AQUI</a>. 
+ 💻 Você pode visualizar a página criada no githubPages clicando [AQUI](https://jmauricioaferreira.github.io/obuc-frontend-challenge/)
 
  <h3> ℹ️ Informações gerais sobre a criação do projeto: </h3> 
 
