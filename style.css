@@ -82,7 +82,7 @@ main .workplace-info {
 nav {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
@@ -118,7 +118,7 @@ nav a:hover {
 
 .workplace-info form {
   font-style: italic;
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   margin-bottom: 5px;
 }
@@ -133,12 +133,13 @@ nav a:hover {
   opacity: 0.8;
 }
 
-.workplace-info form div input,
-.workplace-info form div select {
+.input-style {
   border: 1px solid var(--dark-blue);
   border-radius: 2px;
   opacity: 0.6;
   outline: none;
+  padding-left: 5px;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
 }
 
 .workplace-info form div input:focus,
@@ -152,7 +153,7 @@ nav a:hover {
 .workplace-info form select {
   height: 28px;
   font-family: Calibri;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .workplace-info button {
@@ -182,9 +183,16 @@ nav a:hover {
 }
 
 /* Table ======================== */
+
+.workplace-info {
+  border-left: 2px solid #f1f1f1;
+
+  padding-left: 10px;
+}
+
 .workplace-info table {
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
   border-spacing: 0px;
   border: 1px solid #f0f0f0;
   border-radius: 2px;
@@ -192,13 +200,12 @@ nav a:hover {
 
 .workplace-info table td,
 .workplace-info table th {
-  height: 35px;
-  border: 1px solid #f0f0f0;
+  height: 36px;
+  border: 1px solid #f1f1f1;
 }
 .workplace-info table th {
   width: 100px;
   background: var(--dark-blue);
-  padding: 8px 0px;
   border-radius: 2px;
 
   color: #fff;
@@ -211,8 +218,8 @@ nav a:hover {
 }
 
 .workplace-info tbody td {
-  background: #f6f6f6;
-  padding: 8px 0px;
+  background: rgba(246, 246, 246, 0.8);
+  padding: 2px;
   text-align: center;
 }
 
@@ -222,5 +229,31 @@ nav a:hover {
 }
 
 .workplace-info table td i {
+  display: flex;
   color: var(--dark-blue);
+  align-items: center;
+}
+
+.size {
+  width: 98%;
+  height: 100%;
+}
+
+#select-edit {
+  text-align: center;
+  text-align-last: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+  }
+}
+
+@media (max-width: 420px) {
+  svg {
+    width: 90%;
+  }
 }

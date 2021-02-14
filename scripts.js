@@ -5,7 +5,7 @@ const Storage = {
   set(information) {
     sessionStorage.setItem("ArrLocaisTrabalho", JSON.stringify(information));
   },
-};
+}; //  Funcionalidades de Armazenamento na sessionStorage
 
 const EmployeeInfo = {
   all: Storage.get(),
@@ -27,11 +27,11 @@ const EmployeeInfo = {
     let icons = event.target.parentNode.parentNode.children[3];
 
     employee.innerHTML = `
-      <input type="text" value="${employee.innerHTML}">
+      <input type="text" value="${employee.innerHTML}" class="input-style size" size="14">
     `;
 
     building.innerHTML = `
-    <select id="select-edit" name="building value="">
+    <select id="select-edit" name="building" value="" class="input-style size">
       <option value="Prédio 1">Prédio 1</option>
       <option value="Prédio 2">Prédio 2</option>
       <option value="Prédio 3">Prédio 3</option>
@@ -39,7 +39,7 @@ const EmployeeInfo = {
     `;
 
     workplace.innerHTML = `
-    <input type="text" value="${workplace.innerHTML}">
+    <input type="text" value="${workplace.innerHTML}" class="input-style size" size="14">
     `;
 
     icons.innerHTML = `
@@ -63,10 +63,10 @@ const EmployeeInfo = {
     `;
   },
 
-  cancel(event) {
+  cancel() {
     App.reload();
   },
-};
+}; // Manipulação das informações dos funcionários (adicionar, remover, editar, salvar, cancelar)
 
 const DOM = {
   workplaceContainer: document.querySelector("#data-table tbody"),
@@ -94,7 +94,7 @@ const DOM = {
   clearEmployeeInfo() {
     DOM.workplaceContainer.innerHTML = "";
   },
-};
+}; // Montagem do corpo da tabela
 
 const Form = {
   employee: document.querySelector("input#employee"),
@@ -138,7 +138,7 @@ const Form = {
       alert(error.message);
     }
   },
-};
+}; // Captura, validação, limpeza de campo e submissão do formulário
 
 const App = {
   init() {
@@ -152,6 +152,6 @@ const App = {
     DOM.clearEmployeeInfo();
     App.init();
   },
-};
+}; //Funcionalidades de inicialização da aplicação e recarregamento
 
 App.init();
