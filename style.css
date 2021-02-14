@@ -23,7 +23,7 @@ main {
 }
 
 .container {
-  width: min(95vw, 900px);
+  width: min(96vw, 1000px);
   margin: auto;
   display: grid;
   grid-template-columns: 27% 65%;
@@ -118,7 +118,7 @@ nav a:hover {
 
 .workplace-info form {
   font-style: italic;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   margin-bottom: 5px;
 }
@@ -152,7 +152,7 @@ nav a:hover {
 .workplace-info form select {
   height: 28px;
   font-family: Calibri;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .workplace-info button {
@@ -184,7 +184,7 @@ nav a:hover {
 /* Table ======================== */
 .workplace-info table {
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
   border-spacing: 0px;
   border: 1px solid #f0f0f0;
   border-radius: 2px;
